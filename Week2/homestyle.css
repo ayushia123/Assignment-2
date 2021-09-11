@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+/*background*/
+.main{
+    width:100%;
+    background:linear-gradient(to top,rgba(255,255,255)80%,rgba(0,113,109)25%);
+    background-position: center;
+    background-size:cover;
+    height:100vh;
+}
+
+.icon{
+    width: 200px;
+    float:left;
+    height:70px;
+
+}
+/*TravBlog logo*/
+.logo{
+    color:#ffffff;
+    font-size:80px;
+    font-family:arial;
+    text-shadow: black 2px 2px;
+    padding-left:44px;
+    float:left;
+    padding-top:30px;
+}
+.navbar{
+    width:200px;
+    float:left;
+    height:70px;
+}
+/*Menu*/
+ .menu{
+     width:600px;
+     margin-left: 400px;
+     float:left;
+     height:70px;
+ }
+
+ ul{
+     float:left;
+     display:flex;
+     justify-content:center;
+     align-items:right;
+ }
+ ul li{
+     list-style:none;
+     margin-left:50px;
+     margin-top:3px;
+     font-size:17px;
+ }
+ ul li a{
+      text-decoration: none;
+      color:white;
+      font-family:Arial;
+      font-weight:lighter;
+      transition:0.4s ease-in-out;
+ }
+ ul li a:hover{
+     color:#f5b40d;
+ }
+ @media screen and(max-width:960px){
+     .navbar_container{
+         display:flex;
+         justify-content: space-between;
+         height:80px;
+         z-index:1;
+         width:100%;
+         max-width:1300px;
+         padding:0;
+     }
+ }
+ .navbar_menu{
+     display:grid;
+     grid-template-columns: auto;
+     margin:0;
+     width:100%;
+     position:absolute;
+     top:-1000px;
+     opacity:1;
+     transition:all 0.5s ease;
+     z-index:-1;
+ }
+ .navbar_menu.active{
+     background:#131313;
+     top:100%;
+     opacity:1;
+     transition:all 0.5s ease;
+     z-index:99;
+     height:60vh;
+     font-size:1.6rem;
+ }
+ #navbar_logo{
+     padding-left: 25px;
+ }
+ .navbar_toggle.bar{
+     width:25px;
+     height:3px;
+     margin:5px auto;
+     transition:all 0.3s ease-in-out;
+     background:white;
+ }
+ .navbar_item{
+     width:100%;
+ }
+ .navbar_links{
+     text-align:center;
+     padding:2rem;
+     width:100%;
+     display:table;
+ }
+ #mobile-menu{
+     position:absolute;
+     top:20%;
+     right:5%;
+     transform:translate(5%,20%);
+ }
+ .navbar_toggle.bar{
+     display:block;
+     cursor:pointer;
+ }
+ #mobile-menu.is-active.bar:nth-child(2){
+     opacity:0;
+ }
+ #mobile-menu.is-active.bar:nth-child(1){
+     transform:translateY(8px) rotate(45deg);
+ }
+ #mobile-menu.is-active.bar:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+ 
+ /*Search Bar*/
+ .search{
+     width:330px;
+     float:left;
+     margin-left:1000px;
+     margin-top: -90px;
+ }
+
+ .srch{
+     font-family: arial;
+     width:200px;
+     height:40px;
+     background:white;
+     color:black;
+     margin-top:13px;
+     margin-right:none;
+     font-size: 16px;
+     float:left;
+     padding:10px;
+     border-radius: 5px;
+     
+ }
+/*Search button*/
+ .btn{
+     width:40px;
+     height:40px;
+     background:transparent;
+     margin-top:13px;
+     color:white;
+     border-radius: 5px;
+     
+ }
+ .btn:focus{
+     outline:none;
+ }
+ .srch:focus{
+     outline:none;
+ }
+/*Home-feed*/
+ .feed{
+     width:1000px;
+     height:400px;
+     margin-top: 176px;
+     background:white;
+
+ }
+ .santorini{
+
+    width:240px;
+    height:359px;
+    margin-top: 10px;
+    margin-left: 90px;
+    border-radius: 10px;
+ }
+ .santorini_img{
+     
+     width:100%;
+     height:100%;
+     border-radius: 15px;
+     
+ }
+
+ .santorini:hover .santorini_img {
+    opacity: 0.7;
+  }
+
+ .austria{
+
+    width:240px;
+    height:359px;
+    margin-top: -360px;
+    margin-left: 418px;
+    border-radius: 10px;
+ }
+ .austria_img{
+     
+     width:100%;
+     height:100%;
+     border-radius: 15px;
+    
+ }
+ .austria:hover .austria_img {
+    opacity: 0.7;
+  }
+ .denmark{
+
+    width:240px;
+    height:359px;
+    margin-top:-360px;
+    margin-left: 746px;
+    border-radius: 10px;
+ }
+ .denmark_img{
+     
+     width:100%;
+     height:100%;
+     border-radius: 15px;
+    
+ }
+ .denmark:hover .denmark_img {
+    opacity: 0.7;
+  }
+ .japan{
+
+    width:240px;
+    height:359px;
+    margin-top:-360px;
+    margin-left:1074px;
+    border-radius: 10px;
+ }
+ .japan_img{
+     
+     width:100%;
+     height:100%;
+     border-radius: 15px;
+    
+ }
+ .japan:hover .japan_img {
+    opacity: 0.7;
+ }
+/*Contact*/
+ .par{
+     width:38px;
+     height:38px;
+     margin-left:513px;
+ }
+
+ .tel{
+     width:155px;
+     height:28px;
+     margin-top:-32px;
+     margin-left: 565px;
+ }
+ .info{
+     width:143px;
+     height:28px;
+     margin-left:680px;
+     margin-top: -28px;
+     color:blue;
+ }
+ .info:hover{
+     color:darkblue;
+ }
+ 
