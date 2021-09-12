@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>test</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            {{message}}<br><br> to
+            <span v-blind:title="text">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+            </span>
+            <div id="app-3">
+                <span v-if="seen && value>3"> Now you see me</span>
+                <span v-else>you see something else</span><br><br>
+            </div>
+            <ol>
+                <li v-for="i in todos">
+                    {{i.item}}
+                </li>
+            </ol>
+            <button v-on:click="increase">click me to increase count</button>
+            <button v-on:click="decrease">click me to decrease count</button>
+            <p>{{value}}</p>
+        </div>
+        <script>
+            var myApp=new Vue({
+                el:'#app',
+                data:{
+                    message:'TravBlog',
+                    text:"You loaded this page on" + new Date().toLocaleString(),
+                    seen:true,
+                    todos:[
+                        {item:"Places to Visit"},
+                        {item:"Bookings"},
+                        {item:"Closest Restaurant"},
+                    ],
+                    value:0,
+                },
+                methods:{
+                    increase:function(){
+                        this.value=this.value+1;
+                    },
+                    decrease:function(){
+                        this.value=this.value-1;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
