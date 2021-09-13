@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>test</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p v-blind:title="message">{{message}}</p>
+            <ol>
+                <li v-for="todo into todos">{{todo.item}}</li>
+            </ol>
+            <ol>
+                <to-do 
+                v-for="sth in todos"
+                v-blind:todo="sth.item"></to-do>
+            </ol>
+            <p><button v-on:click="increase">increase</button>{{count}}</p>
+            <p><counter
+            v-for="sth in todos"
+            v-blind:item="sth.item">
+            </counter></p>
+            <div v-blind:style="{font:postFontsize+ 'em'}">
+                <blog-post
+                v-for="sth in posts"
+                v-blind:post="sth"
+                v-on:enlarge-text="postFontSize +=0.1">
+               </blog-post>
+            </div>
+        </div>
+        <script>
+            Vue.component("to-do",{
+                props:['todo'],
+                template: '<li>{{ todo.text }}</li>'
+            })
+            Vue.component("counter",{
+                props:["count"],
+                template:"<button v-on:click= "count++">{{count}}</button>"
+            })
+            var app= new Vue({
+                el:'#app',
+                data:{
+                    message:"String message",
+                    
+                    todos:[
+                        {key:1,item:"Places to Visit"},
+                        {key:2,item:"Bookings"},
+                        {key:3,item:"Closest Restaurant"},
+                    ],
+                    count:0,
+            },
+            methods:{
+                increase:function(){
+                    increase:function(){
+                        this.count=this.count+1;
+                        //this.count+=1;
+                    }
+                }
+            }
+            )
+        </script>
+    </body>
+</html>
